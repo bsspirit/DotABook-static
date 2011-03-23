@@ -72,8 +72,9 @@ a:active {text-decoration: none;}
 .grade .userGrade{width:450px;float:left;}
 .grade h4{font-size:14px;color:#6799D4;margin:5px 0;padding:0;}
 
-.maps ul{font-size:15px;border:0 none;list-style-type:none;float:left;margin:10px;padding:0;clear:both;}
+.maps ul{font-size:15px;border:0 none;list-style-type:none;float:left;margin:10px;padding:0 0 3px 0;clear:both;}
 .maps ul li{display:inline;float:left;}
+.maps .tab{border-bottom:1px solid #094E64;}
 
 .tab li{text-align: center;}
 .line li{text-align: center;margin:5px 0;}
