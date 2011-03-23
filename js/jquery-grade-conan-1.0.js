@@ -1,5 +1,5 @@
 $(document).ready(function(){ 
-	var path = 'http://localhost/dota/image/layout/';
+	var path = '{{STATIC}}/image/layout/';
 
 	$.getJSON('/heroes/grade/'+hid,function(res){
 		update(res);
