@@ -7,7 +7,7 @@ $(document).ready(function(){
 		$('.rating .rate').each(function(idx){
 			var v = $(this).attr('v');
 			var imgs ='';
-			if($(this).parent().attr('class').indexOf('readonly')==-1){//只读
+			if($(this).parent().attr('class').indexOf('readonly')==-1){//�ж�ֻ��
 				for(i=1;i<=5;i++){
 					imgs += '<a href="#'+i+'"><img class="star" s="'+idx+'-'+i+'" src="'+path+'gray.gif"></a>';						
 				}	
@@ -66,44 +66,4 @@ $(document).ready(function(){
 				render($(this));
 			});
 			
-			var r = confirm('发布微博信息：'+res.tweet);
-			if (r==true){
-				$.post('/heroes/grade_send_tweet')
-			} 
-		});
-		
-	});
-	
-	function render(rateObj){
-		var v=rateObj.attr('v')
-		rateObj.find('img').each(function(idx){
-			if(idx<v){	
-				$(this).attr('src',path+'yellow.gif');
-			} else {
-				$(this).attr('src',path+'gray.gif');
-			}
-		});
-		rateObj.parent().children('.score').html(v)
-	}
-	
-	function update(res){
-		$('.grade .myGrade .rating .rate').each(function(){
-			if($(this).attr('name')=='gank'){$(this).attr('v',res.my.gank)}
-			if($(this).attr('name')=='push'){$(this).attr('v',res.my.push)}
-			if($(this).attr('name')=='dps'){$(this).attr('v',res.my.dps)}
-			if($(this).attr('name')=='assist'){$(this).attr('v',res.my.assist)}
-			if($(this).attr('name')=='defend'){$(this).attr('v',res.my.defend)}
-		});
-		
-		$('.grade .userGrade .rating .rate').each(function(){
-			if($(this).attr('name')=='gank'){$(this).attr('v',res.user.gank)}
-			if($(this).attr('name')=='push'){$(this).attr('v',res.user.push)}
-			if($(this).attr('name')=='dps'){$(this).attr('v',res.user.dps)}
-			if($(this).attr('name')=='assist'){$(this).attr('v',res.user.assist)}
-			if($(this).attr('name')=='defend'){$(this).attr('v',res.user.defend)}
-		});
-		
-		$('.userGrade h4 em').html(res.user.count);
-	}
-	
-})
+			var r = confirm('
