@@ -89,6 +89,7 @@ a:active {text-decoration: none;}
 .text_width{width:400px}
 .text_height{height:20px}
 .feedback{color:red}
+.btn1{background-color:gray;font-size:14px;padding:6px;margin:10px 10px 0 0;color:#6799D4;}
 
 /* function */
 .function{padding:5px 0;}
