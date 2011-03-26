@@ -72,6 +72,17 @@ a:active {text-decoration: none;}
 .grade .userGrade{width:450px;float:left;}
 .grade h4{font-size:14px;color:#6799D4;margin:5px 0;padding:0;}
 
+
+.msgs ul{border:0 none;list-style-type:none;float:left;margin:10px;padding:0;width:100%;}
+.msgs ul li{margin:0 20px 10px 0;padding:0 0 15px 0;border-bottom:1px dashed gray;}
+.msgs ul li .l-msg{float:left;}
+.msgs ul li .r-msg{margin:0 0 0 80px;}
+.msgs ul li .b-msg{margin:0 0 0 80px;}
+.msgs ul li .b-msg .b-msg-btn{float:right;}
+.msgs .b-page{margin:0 0 0 10px;}
+.msgs .b-page .b-page-btn{float:right;margin:0 15px 0 0;}
+
+
 .maps ul{font-size:15px;border:0 none;list-style-type:none;float:left;margin:10px;padding:0 0 3px 0;clear:both;}
 .maps ul li{display:inline;float:left;}
 .maps .tab{border-bottom:1px solid #094E64;}
@@ -90,6 +101,8 @@ a:active {text-decoration: none;}
 .text_height{height:20px}
 .feedback{color:red}
 .btn1{background-color:gray;font-size:14px;padding:6px;margin:10px 10px 0 0;color:#6799D4;}
+.btn2{font-size:12px;padding:3px;margin:5px 5px 0 0;color:#FFF;border:1px solid gray;}
+.area{width:600px;line-height:20px;}
 
 /* function */
 .function{padding:5px 0;}

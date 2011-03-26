@@ -54,23 +54,34 @@ $(document).ready(function(){
 	
 	$('#grade-submit').click(function(){
 		var obj = {};
+		var submit = true;
 		$('.grade .myGrade .rating .rate').each(function(){
 			var name = $(this).attr('name');
 			var value = $(this).attr('v');
+			
+			if(value == 0){
+				submit=false;
+			}
+			
 			obj[name]=value;
 		});
 		
-		$.post('/heroes/grade/'+hid,obj,function(res){
-			update(res);
-			$('.grade .userGrade .rating .rate').each(function(idx){
-				render($(this));
-			});
+		
+		if(submit){
+			$.post('/heroes/grade/'+hid,obj,function(res){
+				update(res);
+				$('.grade .userGrade .rating .rate').each(function(idx){
+					render($(this));
+				});
 			
-			var r = confirm('发布微博信息：'+res.tweet);
-			if (r==true){
-				$.post('/heroes/grade_send_tweet')
-			} 
-		});
+				var r = confirm('发布微博信息：'+res.tweet);
+				if (r==true){
+					$.post('/heroes/grade_send_tweet')
+				} 
+			});
+		} else {
+			alert("请给英雄打分后再提交！最低1分，最高5分！")
+		}
 		
 	});
 	
