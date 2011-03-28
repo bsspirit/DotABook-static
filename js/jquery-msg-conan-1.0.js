@@ -1,25 +1,30 @@
-$(document).ready(function(){ 
+$(document).ready(function(){
+
+	var content='';
 
 	$('#msg-submit').click(function(){
-		var content = $('#msg-content').val();
-		var box_sina = $('#msg-box-sina').attr('checked');
-		var obj = {'content':content,'send_sina':box_sina}
+		cur_content = $('#msg-content').val();
 		
-		if(content == ''){
+		if(cur_content == ''){
 			alert('留言不能为空，请填写留言！')
-		} else if (content.length>100){
+		} else if (cur_content.length>100){
 			alert('留言不能超过100字，请重新输入。')
+		} else if(content == cur_content){
+			//alert('不能重复提交');
 		} else {
+			content = cur_content;
+			var box_sina = $('#msg-box-sina').attr('checked');
+			var obj = {'content':content,'send_sina':box_sina}
+
 			$.post('/heroes/msg/'+hid,obj,function(res){
 				$('#tabs-2 .msgs').html(msg_html(res));
-				$('#msg-content').val('');
+				$('#msg-content').val('');			
 				$('.b-page-btn').find('.btn2').click(function(){
 					var idx = $(this).attr('idx');
 					ajax_msg(idx);
 				});
 			});		
 		}
-		
 	});
 	
 	$('#tabs').tabs({
