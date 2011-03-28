@@ -1,6 +1,6 @@
 $(document).ready(function(){ 
-	//var path = 'http://1.dotabook.sinaapp.com/static/image/layout/';
-	var path = 'http://localhost/static/image/layout/';
+	var path = 'http://1.dotabook.sinaapp.com/static/image/layout/';
+	//var path = 'http://localhost/static/image/layout/';
 
 	$.getJSON('/heroes/grade/'+hid,function(res){
 		update(res);
