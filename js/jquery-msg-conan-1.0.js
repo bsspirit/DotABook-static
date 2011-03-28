@@ -45,8 +45,8 @@ $(document).ready(function(){
 		var html = '<ul>'
 		for (var i=0;i<msgs.length;i++){
 			html += '<li>'
-			html += '<div class="l-msg"><img src="http://localhost/static/image/portrait/64/8.gif"/></div>'
-			html += '<div class="r-msg">' + msgs[i].uid+': '+msgs[i].content+'</div>'
+			html += '<div class="l-msg"><img src="'+msgs[i].profile_image+'"/></div>'
+			html += '<div class="r-msg">' + msgs[i].screen+': '+msgs[i].content+'</div>'
 			html += '<div class="clear"></div>'
 			html += '<div class="b-msg">'
 			html += '<span style="color:#FF9000">第'+msgs[i].floor+'楼</span>&nbsp;&nbsp;'+msgs[i].date
