@@ -12,6 +12,7 @@ $(document).ready(function(){
 		} else {
 			$.post('/heroes/msg/'+hid,obj,function(res){
 				$('#tabs-2 .msgs').html(msg_html(res));
+				$('#msg-content').val('');
 				$('.b-page-btn').find('.btn2').click(function(){
 					var idx = $(this).attr('idx');
 					ajax_msg(idx);
