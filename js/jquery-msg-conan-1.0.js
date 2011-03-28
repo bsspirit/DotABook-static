@@ -1,6 +1,26 @@
-
-
 $(document).ready(function(){ 
+
+	$('#msg-submit').click(function(){
+		var content = $('#msg-content').val();
+		var box_sina = $('#msg-box-sina').attr('checked');
+		var obj = {'content':content,'send_sina':box_sina}
+		
+		if(content == ''){
+			alert('留言不能为空，请填写留言！')
+		} else if (content.length>100){
+			alert('留言不能超过100字，请重新输入。')
+		} else {
+			$.post('/heroes/msg/'+hid,obj,function(res){
+				$('#tabs-2 .msgs').html(msg_html(res));
+				$('.b-page-btn').find('.btn2').click(function(){
+					var idx = $(this).attr('idx');
+					ajax_msg(idx);
+				});
+			});		
+		}
+		
+	});
+	
 	$('#tabs').tabs({
 		select:function(e,ui){
 			if(ui.index==1){
@@ -39,24 +59,30 @@ $(document).ready(function(){
 			html += '</li>'
 		}
 		html += '</ul>'
-		html += '<div class="b-page">'
-		html += '共'+res.total+'条，每页'+res.count+'条'
 		
-		var num = 0;
-		if (res.total%res.count == 0){
-			num = res.total/res.count;		
-		} else {
-			num = Math.floor(res.total/res.count )+1;
-			
-		}
+		if(res.total>0){
+			html += '<div class="b-page">'
+			html += '共'+res.total+'条，每页'+res.count+'条'
 		
-		html += '<span class="b-page-btn">'
-		for(var i=0;i<num;i++){
-			var page = i + 1
-			html += '<a class="btn2" href="#" idx="'+page+'">'+page+'</a>'
+			var num = 0;
+			if (res.total%res.count == 0){
+				num = res.total/res.count;		
+			} else {
+				num = Math.floor(res.total/res.count )+1;
+			}
+		
+			html += '<span class="b-page-btn">'
+			for(var i=0;i<num;i++){
+				var page = i + 1
+				if(page == res.page){
+					html += '<span class="btn2_current">'+page+'</span>'
+				}else{
+					html += '<a class="btn2" href="#" idx="'+page+'">'+page+'</a>'
+				}
+			}
+			html += '</span>'
+			html += '</div>'
 		}
-		html += '</span>'
-		html += '</div>'
 
 		return html;
 	}

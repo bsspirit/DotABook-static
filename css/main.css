@@ -102,6 +102,7 @@ a:active {text-decoration: none;}
 .feedback{color:red}
 .btn1{background-color:gray;font-size:14px;padding:6px;margin:10px 10px 0 0;color:#6799D4;}
 .btn2{font-size:12px;padding:3px;margin:5px 5px 0 0;color:#FFF;border:1px solid gray;}
+.btn2_current{font-size:12px;padding:3px;margin:5px 5px 0 0;color:#FFF;}
 .area{width:600px;line-height:20px;}
 
 /* function */
