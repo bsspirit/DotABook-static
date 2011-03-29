@@ -69,7 +69,7 @@ $(document).ready(function(){
 						var screen =$(this).attr('screen');
 						
 						html  = '<textarea mid="'+mid+'" title="请在100字之内" rows="3" class="area2" id="repost-content">'
-						html += '//'+screen+':'+content
+						html += '//@'+screen+':'+content
 						html += '</textarea>'
 					
 						$('#dialog-repost').html(html);
