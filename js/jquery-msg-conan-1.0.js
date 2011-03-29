@@ -1,6 +1,14 @@
 $(document).ready(function(){
+	
+	$('#tabs').tabs({
+		select:function(e,ui){
+			if(ui.index==1){
+				ajax_msg(1);
+			}
+		}
+	});	
 
-	var content='';
+	var content='';	
 
 	$('#msg-submit').click(function(){
 		cur_content = $('#msg-content').val();
@@ -21,6 +29,7 @@ $(document).ready(function(){
 				$('#msg-content').val('');
 				render_btn();
 				render_page();
+				render_dialog();
 				$('.b-page-btn').find('.btn2').click(function(){
 					var idx = $(this).attr('idx');
 					ajax_msg(idx);
@@ -28,15 +37,7 @@ $(document).ready(function(){
 			});		
 		}
 	});
-	
-	$('#tabs').tabs({
-		select:function(e,ui){
-			if(ui.index==1){
-				ajax_msg(1);
-			}
-		}
-	});
-	
+		
 	function render_btn(){
 		$('#tabs-2 .msgs').find('.b-msg-btn').each(function(){
 			$(this).find('.btn1').each(function(){
@@ -63,6 +64,16 @@ $(document).ready(function(){
 								btn.text("反对("+res.size+")")
 							}
 						});
+					} else if (action == 'repost'){
+						var content = $(this).attr('content');
+						var screen =$(this).attr('screen');
+						
+						html  = '<textarea mid="'+mid+'" title="请在100字之内" rows="3" class="area2" id="repost-content">'
+						html += '//'+screen+':'+content
+						html += '</textarea>'
+					
+						$('#dialog-repost').html(html);
+						$('#dialog-repost').dialog('open');
 					}
 				});
 			});
@@ -76,14 +87,48 @@ $(document).ready(function(){
 		});
 	}
 	
+	function render_dialog(){
+		$('#dialog-repost').dialog({
+			autoOpen: false,
+			width: 430,
+			draggable:true,
+			modal:true,
+			buttons: {
+				"转发": function() {
+					var rep_obj = $('#repost-content');
+					rep_content = rep_obj.val()
+					rep_mid = rep_obj.attr('mid')
+					
+					var obj = {'content':rep_content,'hid':hid}
+					var url = '/heroes/msg/repost/'+rep_mid
+					if(rep_content == ''){
+						alert('留言不能为空，请填写留言！')
+					} else if (rep_content.length>100){
+						alert('留言不能超过100字，请重新输入。')
+					} else {
+						$.post(url,obj,function(res){
+							ajax_msg(1);
+						});
+						$(this).dialog("close"); 
+					}
+
+				}, 
+				"取消": function() { 
+					$(this).dialog("close"); 
+				} 
+			}
+		});
+	}
+	
 	function ajax_msg(page){
 		$.getJSON('/heroes/msg/'+hid+'?p='+page,function(res){
 			$('#tabs-2 .msgs').html(msg_html(res));
 			render_btn();
 			render_page();
+			render_dialog();
 		});
 	}
-
+	
 	
 	function msg_html(res){
 		var msgs = res.msgs;
@@ -98,8 +143,7 @@ $(document).ready(function(){
 			html += '<span class="b-msg-btn">'
 			html += '<a mid="'+msgs[i].mid+'" action="up" class="btn1" href="#">支持('+msgs[i].count.up+')</a>'
 			html += '<a mid="'+msgs[i].mid+'" action="down" class="btn1" href="#">反对('+msgs[i].count.down+')</a>'
-			html += '<a mid="'+msgs[i].mid+'" action="repost" class="btn1" href="#">转发('+msgs[i].count.repost+')</a>'
-			html +=	'<a mid="'+msgs[i].mid+'" action="comment" class="btn1" href="#">评论('+msgs[i].count.comment+')</a>'
+			html += '<a mid="'+msgs[i].mid+'" action="repost" class="btn1" href="#" screen="'+msgs[i].screen+'" content="'+msgs[i].content+'">转发('+msgs[i].count.repost+')</a>'
 			html += '</span>'
 			html += '</li>'
 		}
@@ -128,6 +172,8 @@ $(document).ready(function(){
 			html += '</span>'
 			html += '</div>'
 		}
+		
+		html += '<div id="dialog-repost" title="转发到新浪微博"></div>'
 
 		return html;
 	}
