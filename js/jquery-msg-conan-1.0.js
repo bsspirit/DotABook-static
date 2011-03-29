@@ -18,7 +18,9 @@ $(document).ready(function(){
 
 			$.post('/heroes/msg/'+hid,obj,function(res){
 				$('#tabs-2 .msgs').html(msg_html(res));
-				$('#msg-content').val('');			
+				$('#msg-content').val('');
+				render_btn();
+				render_page();
 				$('.b-page-btn').find('.btn2').click(function(){
 					var idx = $(this).attr('idx');
 					ajax_msg(idx);
@@ -35,46 +37,50 @@ $(document).ready(function(){
 		}
 	});
 	
+	function render_btn(){
+		$('#tabs-2 .msgs').find('.b-msg-btn').each(function(){
+			$(this).find('.btn1').each(function(){
+				$(this).click(function(){
+					var btn = $(this);
+					var mid = $(this).attr('mid')
+					var action = $(this).attr('action')
+				
+					if(action=='up'){
+						var url = '/heroes/msg/up/'+mid
+						$.post(url,function(res){
+							if(res.submit){
+								alert('您已经支持过了！')
+							} else {
+								btn.text("支持("+res.size+")")
+							}
+						});
+					} else if(action=='down'){
+						var url = '/heroes/msg/down/'+mid
+						$.post(url,function(res){
+							if(res.submit){
+								alert('您已经反对过了！')
+							} else {
+								btn.text("反对("+res.size+")")
+							}
+						});
+					}
+				});
+			});
+		});
+	}
+	
+	function render_page(){
+		$('.b-page-btn').find('.btn2').click(function(){
+			var idx = $(this).attr('idx');
+			ajax_msg(idx);
+		});
+	}
+	
 	function ajax_msg(page){
 		$.getJSON('/heroes/msg/'+hid+'?p='+page,function(res){
 			$('#tabs-2 .msgs').html(msg_html(res));
-			
-			// render button
-			$('#tabs-2 .msgs').find('.b-msg-btn').each(function(){
-				$(this).find('.btn1').each(function(){
-					$(this).click(function(){
-						var btn = $(this);
-						var mid = $(this).attr('mid')
-						var action = $(this).attr('action')
-					
-						if(action=='up'){
-							var url = '/heroes/msg/up/'+mid
-							$.post(url,function(res){
-								if(res.submit){
-									alert('您已经支持过了！')
-								} else {
-									btn.text("支持("+res.size+")")
-								}
-							});
-						} else if(action=='down'){
-							var url = '/heroes/msg/down/'+mid
-							$.post(url,function(res){
-								if(res.submit){
-									alert('您已经反对过了！')
-								} else {
-									btn.text("反对("+res.size+")")
-								}
-							});
-						}
-					});
-				});
-			});
-			
-			// render page
-			$('.b-page-btn').find('.btn2').click(function(){
-				var idx = $(this).attr('idx');
-				ajax_msg(idx);
-			});
+			render_btn();
+			render_page();
 		});
 	}
 
