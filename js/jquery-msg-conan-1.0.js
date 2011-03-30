@@ -1,9 +1,13 @@
 $(document).ready(function(){
 	
+	var tab1 = 0;
 	$('#tabs').tabs({
 		select:function(e,ui){
 			if(ui.index==1){
-				ajax_msg(1);
+				if(tab1==0){
+					tab1 = 1;
+					ajax_msg(1);
+				}
 			}
 		}
 	});	
