@@ -141,9 +141,9 @@ $(document).ready(function(){
 			html += '<div class="b-msg">'
 			html += '<span style="color:#FF9000">第'+msgs[i].floor+'楼</span>&nbsp;&nbsp;'+msgs[i].date
 			html += '<span class="b-msg-btn">'
-			html += '<a mid="'+msgs[i].mid+'" action="up" class="btn1" href="#">支持('+msgs[i].count.up+')</a>'
-			html += '<a mid="'+msgs[i].mid+'" action="down" class="btn1" href="#">反对('+msgs[i].count.down+')</a>'
-			html += '<a mid="'+msgs[i].mid+'" action="repost" class="btn1" href="#" screen="'+msgs[i].screen+'" content="'+msgs[i].content+'">转发('+msgs[i].count.repost+')</a>'
+			html += '<a mid="'+msgs[i].mid+'" action="up" class="btn1" href="javascript:void(0);">支持('+msgs[i].count.up+')</a>'
+			html += '<a mid="'+msgs[i].mid+'" action="down" class="btn1" href="javascript:void(0);">反对('+msgs[i].count.down+')</a>'
+			html += '<a mid="'+msgs[i].mid+'" action="repost" class="btn1" href="javascript:void(0);" screen="'+msgs[i].screen+'" content="'+msgs[i].content+'">转发('+msgs[i].count.repost+')</a>'
 			html += '</span>'
 			html += '</li>'
 		}
@@ -166,7 +166,7 @@ $(document).ready(function(){
 				if(page == res.page){
 					html += '<span class="btn2_current">'+page+'</span>'
 				}else{
-					html += '<a class="btn2" href="#" idx="'+page+'">'+page+'</a>'
+					html += '<a class="btn2" href="javascript:void(0);" idx="'+page+'">'+page+'</a>'
 				}
 			}
 			html += '</span>'
