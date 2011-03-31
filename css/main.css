@@ -11,7 +11,7 @@ a:active {text-decoration: none;}
 .clear{clear:both}
 
 /* main */
-#main{padding:5px 0;margin:0 auto;width:995px;background: url("http://1.dotabook.sinaapp/static/image/layout/bg.gif") repeat scroll 0 0 #FFFFFF;}
+#main{padding:5px 0;margin:0 auto;width:995px;background: url("http://1.dotabook.sinaapp.com/static/image/layout/bg.gif") repeat scroll 0 0 #FFFFFF;}
 .img15{width:15px;}
 .img20{width:20px;}
 .img35{width:35px;}
@@ -32,8 +32,8 @@ a:active {text-decoration: none;}
 
 /* header */
 #header{padding:0 20px;}
-#header .t_line{background: url("http://1.dotabook.sinaapp/static/image/layout/t_line.jpg") no-repeat scroll 0 0; line-height:30px;padding-left:20px;}
-#header .t_header{background: url("http://1.dotabook.sinaapp/static/image/layout/t_nav.jpg") no-repeat scroll 0 0; padding-left:10px;height:155px;}
+#header .t_line{background: url("http://1.dotabook.sinaapp/static/image.com/layout/t_line.jpg") no-repeat scroll 0 0; line-height:30px;padding-left:20px;}
+#header .t_header{background: url("http://1.dotabook.sinaapp/static/image.com/layout/t_nav.jpg") no-repeat scroll 0 0; padding-left:10px;height:155px;}
 #header .t_header .t_logo{padding:30px 10px 20px 10px;}
 #header .t_header .t_nav{border: 0 none;clear: both;list-style-type: none; margin:8px 0;padding: 0;}
 #header .t_header .t_nav ul{margin:0;padding:0;}
@@ -115,7 +115,7 @@ a:active {text-decoration: none;}
 .line li{text-align: center;margin:5px 0;}
 
 /* footer */
-#footer{height:80px;padding:0 20px;border-top:3px solid gray;background: url("http://1.dotabook.sinaapp/static/image/layout/wave.png") repeat-x scroll 50% 50% #333333;}
+#footer{height:80px;padding:0 20px;border-top:3px solid gray;background: url("http://1.dotabook.sinaapp.com/static/image/layout/wave.png") repeat-x scroll 50% 50% #333333;}
 #footer .copyright{vertical-align:middle;margin:10px 0;}
 
 /* form */
@@ -133,7 +133,7 @@ a:active {text-decoration: none;}
 
 /* widget */
 .box{margin:10px;}
-.box .box_header{background: url("http://1.dotabook.sinaapp/static/image/layout/wave.png") repeat-x scroll 50% 50% #333333;border: 1px solid #333333;padding:4px;margin:5px 0;}
+.box .box_header{background: url("http://1.dotabook.sinaapp.com/static/image/layout/wave.png") repeat-x scroll 50% 50% #333333;border: 1px solid #333333;padding:4px;margin:5px 0;}
 .box .box_header h3{font-family:Segoe UI,Arial,sans-serif;font-size:14px;margin:2px 0 2px 10px;padding:0;}
 .box .box_content{padding:4px;margin:10px 0;}
 
