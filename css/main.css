@@ -32,8 +32,8 @@ a:active {text-decoration: none;}
 
 /* header */
 #header{padding:0 20px;}
-#header .t_line{background: url("http://1.dotabook.sinaapp/static/image.com/layout/t_line.jpg") no-repeat scroll 0 0; line-height:30px;padding-left:20px;}
-#header .t_header{background: url("http://1.dotabook.sinaapp/static/image.com/layout/t_nav.jpg") no-repeat scroll 0 0; padding-left:10px;height:155px;}
+#header .t_line{background: url("http://1.dotabook.sinaapp.com/static/image/layout/t_line.jpg") no-repeat scroll 0 0; line-height:30px;padding-left:20px;}
+#header .t_header{background: url("http://1.dotabook.sinaapp.com/static/image/layout/t_nav.jpg") no-repeat scroll 0 0; padding-left:10px;height:155px;}
 #header .t_header .t_logo{padding:30px 10px 20px 10px;}
 #header .t_header .t_nav{border: 0 none;clear: both;list-style-type: none; margin:8px 0;padding: 0;}
 #header .t_header .t_nav ul{margin:0;padding:0;}
