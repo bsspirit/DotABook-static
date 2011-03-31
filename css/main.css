@@ -70,6 +70,14 @@ a:active {text-decoration: none;}
 .namecard a{color:orange;}
 .namecard .nc_b_btn a{color:#FFF;}
 
+.userinfo{padding:2px;}
+.userinfo .nc_l{padding:0 8px 0 0;float:left;}
+.userinfo .nc_r{line-height:18px;}
+.userinfo .nc_b{margin:5px 0 0 0;}
+.userinfo .nc_b_btn{margin:10px 0 2px 0;}
+.userinfo a{color:orange;}
+.userinfo .nc_b_btn a{color:#FFF;}
+
 .hero{background-color:#000;padding:5px;}
 .h_left{float:left;width:230px;margin:2px 5px;}
 .h_left_img{margin:0 15px 0 0;float:left;}
