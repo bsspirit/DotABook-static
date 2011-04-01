@@ -119,6 +119,9 @@ a:active {text-decoration: none;}
 .maps ul li{display:inline;float:left;}
 .maps .tab{border-bottom:1px solid #FFF; padding:20px 0;}
 
+.upgrade ul{margin:0;padding:0;list-style-type:none;}
+.upgrade ul li{line-height:20px;}
+
 .tab li{text-align: center;}
 .line li{text-align: center;margin:5px 0;}
 

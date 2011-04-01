@@ -143,7 +143,7 @@ $(document).ready(function(){
 			html += '<div class="l-msg">'
 			html += '<a href="javascript:void(0);" uid="'+msgs[i].uid+'" namecard="true"><img src="'+msgs[i].profile_image+'"/></a>'
 			html += '</div>'
-			html += '<div class="r-msg"><a href="javascript:void(0);" uid="'+msgs[i].uid+'" namecard="true">' + msgs[i].screen+'</a>: '+msgs[i].content+'</div>'
+			html += '<div class="r-msg">' + msgs[i].screen+': '+msgs[i].content+'</div>'
 			html += '<div class="clear"></div>'
 			html += '<div class="b-msg">'
 			html += '<span style="color:#FF9000">第'+msgs[i].floor+'楼</span>&nbsp;&nbsp;'+msgs[i].date
