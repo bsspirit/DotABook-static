@@ -111,6 +111,7 @@ a:active {text-decoration: none;}
 .msgs ul li .l-msg{float:left;}
 .msgs ul li .r-msg{margin:0 0 0 80px;}
 .msgs ul li .b-msg{margin:0 0 0 80px;}
+.msgs ul li .b-msg .b-msg-info{float:left;}
 .msgs ul li .b-msg .b-msg-btn{float:right;}
 .msgs .b-page{margin:0 0 0 10px;}
 .msgs .b-page .b-page-btn{float:right;margin:0 15px 0 0;}
