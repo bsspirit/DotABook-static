@@ -155,6 +155,7 @@ $(document).ready(function(){
 			html += '</li>'
 		}
 		html += '</ul>'
+		html += '<div class="clear"></div>'
 		
 		if(res.total>0){
 			html += '<div class="b-page">'
