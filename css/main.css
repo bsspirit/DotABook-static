@@ -106,8 +106,8 @@ a:active {text-decoration: none;}
 .grade .userGrade{width:400px;float:left;}
 .grade h4{font-size:14px;color:#6799D4;margin:5px 0;padding:0;}
 
-.msgs ul{border:0 none;list-style-type:none;float:left;margin:10px;padding:0;width:95%;}
-.msgs ul li{margin:0 20px 10px 0;padding:0 0 15px 0;border-bottom:1px dashed gray;}
+.msgs ul{border:0 none;list-style-type:none;margin:10px;padding:0;}
+.msgs ul li{margin:0 10px 10px 0;padding:0 0 15px 0;border-bottom:1px dashed gray;}
 .msgs ul li .l-msg{float:left;}
 .msgs ul li .r-msg{margin:0 0 0 80px;}
 .msgs ul li .b-msg{margin:0 0 0 80px;}
