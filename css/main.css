@@ -41,7 +41,7 @@ a:active {text-decoration: none;}
 
 /* content */
 #content{padding:0 20px;}
-#content .l_content{float:left;width:65%;}
+#content .l_content{float:left;width:60%;}
 #content .l_content .intro{margin:30px 5px;}
 #content .l_content .comment{margin:30px 5px;}
 #content .r_content{float:left;width:35%;}
