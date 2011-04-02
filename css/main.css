@@ -1,6 +1,6 @@
 /* html */
 html {padding:0;margin:0;}
-body {margin:auto; padding:0; width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#FFF; background-color:#000;}
+body {margin:0; padding:0; width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#FFF; background-color:#000;text-align:center;}
 a img{border:none;}
 img{vertical-align:middle;}
 
@@ -11,7 +11,7 @@ a:active {text-decoration: none;}
 .clear{clear:both}
 
 /* main */
-#main{padding:5px 0;margin:0 auto;width:995px;background: url("http://1.dotabook.sinaapp.com/static/image/layout/bg.gif") repeat scroll 0 0 #FFFFFF;}
+#main{padding:5px 0;margin:0 auto;width:995px;background: url("http://1.dotabook.sinaapp.com/static/image/layout/bg.gif") repeat scroll 0 0 #FFFFFF;text-align:left;}
 .img15{width:15px;}
 .img20{width:20px;}
 .img35{width:35px;}
