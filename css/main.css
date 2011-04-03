@@ -154,5 +154,5 @@ a:active {text-decoration: none;}
 .box .box_content{padding:4px;margin:10px 0;}
 
 .user_head_list ul{margin:0;padding:0;}
-.user_head_list ul li{display:inline;float:left;text-align:center;margin:1px;}
-.user_head .m_name{overflow:hidden;height:16px;width:60px;}
+.user_head_list ul li{display:inline;float:left;text-align:center;margin:1px;height:66px;overflow:hidden;}
+.user_head .m_name{margin:2px 0;width:60px;}
