@@ -113,7 +113,7 @@ $(document).ready(function(){
 			html += '<div class="clear"></div>'
 			html += '<div class="b-msg">'
 			html += '<div class="b-msg-info">'
-			html += msgs[i].date+'&nbsp;&nbsp;<a href="http://dotabook.info" target="_blank">来自<span class="info2">DotABook</info></a>'
+			html += msgs[i].date+'&nbsp;&nbsp;<a href="http://dotabook.info" target="_blank">来自<span class="info2">DotABook</span></a>'
 			html += '</div>'
 			html += '<div class="b-msg-btn">'
 			html += '<a mid="'+msgs[i].mid+'" action="up" class="btn1" href="javascript:void(0);">支持('+msgs[i].count.up+')</a>'
