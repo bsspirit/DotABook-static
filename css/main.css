@@ -141,11 +141,19 @@ a:active {text-decoration: none;}
 .btn2_current{font-size:12px;padding:3px;margin:5px 5px 0 0;color:#FFF;}
 .btn3{background-color:orange;font-size:14px;padding:3px 6px;margin:10px 10px 0 0;color:#FFF;}
 .btn4{font-size:12px;padding:3px 6px;color:#000;}
+.btn5{padding:2px 4px;}
+.btn5_current{padding:2px 4px;background-color:orange;}
 .area{width:600px;line-height:20px;}
 .area2{width:400px;line-height:20px;}
 
 /* function */
 .function{padding:5px 0;}
+
+/* composite */
+#heroes{margin-bottom:80px;}
+#heroes ul{border:0 none;list-style-type:none;margin:10px 0;padding:0;}
+#heroes ul li{margin-right:15px;padding:0;display:inline;}
+#heroes .hero_pic{margin:4px 4px 4px 0;float:left;}
 
 /* widget */
 .box{margin:10px;}
