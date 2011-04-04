@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 	function render_btn(){
 		$('#msgs').find('.b-msg-btn').each(function(){
-			$(this).find('.btn1').each(function(){
+			$(this).find('.btn4').each(function(){
 				$(this).click(function(){
 					var btn = $(this);
 					var mid = $(this).attr('mid')
