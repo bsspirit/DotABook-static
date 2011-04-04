@@ -10,7 +10,9 @@ $(document).ready(function(){
 			$('#msgs').html(msg_html(res));
 			render_btn();
 			render_dialog();
-			render_namecard('#msgs')
+			if($('#msgs').attr('login')=='True'){
+				render_namecard('#msgs')
+			}
 			render_page();
 		});
 	}
@@ -44,8 +46,9 @@ $(document).ready(function(){
 						} else if (action == 'repost'){
 							var content = $(this).attr('content');
 							var screen =$(this).attr('screen');
+							var hid = $(this).attr('hid');
 						
-							html  = '<textarea mid="'+mid+'" title="请在100字之内" rows="3" class="area2" id="repost-content">'
+							html  = '<textarea mid="'+mid+'" title="请在100字之内" rows="4" class="area2" id="repost-content" hid="'+hid+'">'
 							html += '//@'+screen+':'+content
 							html += '</textarea>'
 					
@@ -78,6 +81,7 @@ $(document).ready(function(){
 					var rep_obj = $('#repost-content');
 					rep_content = rep_obj.val()
 					rep_mid = rep_obj.attr('mid')
+					hid = rep_obj.attr('hid')
 					
 					var obj = {'content':rep_content,'hid':hid}
 					var url = '/heroes/msg/repost/'+rep_mid
@@ -98,8 +102,6 @@ $(document).ready(function(){
 			}
 		});
 	}
-
-	
 	
 	function msg_html(res){
 		var msgs = res.msgs;
@@ -120,7 +122,7 @@ $(document).ready(function(){
 			html += '<div class="b-msg-btn">'
 			html += '<a mid="'+msgs[i].mid+'" action="up" class="btn4" href="javascript:void(0);">支持('+msgs[i].count.up+')</a>'
 			html += '<a mid="'+msgs[i].mid+'" action="down" class="btn4" href="javascript:void(0);">反对('+msgs[i].count.down+')</a>'
-			html += '<a mid="'+msgs[i].mid+'" action="repost" class="btn4" href="javascript:void(0);" screen="'+msgs[i].screen+'" content="'+msgs[i].content+'">转发('+msgs[i].count.repost+')</a>'
+			html += '<a mid="'+msgs[i].mid+'" action="repost" class="btn4" href="javascript:void(0);" screen="'+msgs[i].screen+'" content="'+msgs[i].content+'" hid="'+msgs[i].hid+'">转发('+msgs[i].count.repost+')</a>'
 			html += '</div>'
 			html += '<div class="clear"></div>'
 			html += '</li>'
