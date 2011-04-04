@@ -109,7 +109,9 @@ $(document).ready(function(){
 			html += '<div class="l-msg">'
 			html += '<a href="javascript:void(0);" uid="'+msgs[i].uid+'" namecard="true"><img src="'+msgs[i].profile_image+'"/></a>'
 			html += '</div>'
-			html += '<div class="r-msg">' + msgs[i].screen+': '+msgs[i].content+'</div>'
+			html += '<div class="r-msg">' + msgs[i].screen+': '+msgs[i].content
+			html += '<p>英雄：<a href="/heroes/'+msgs[i].hid+'"><span class="info3">'+msgs[i].hnamecn+'</span></a></p>'
+			html += '</div>'
 			html += '<div class="clear"></div>'
 			html += '<div class="b-msg">'
 			html += '<div class="b-msg-info">'
