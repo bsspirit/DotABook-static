@@ -139,6 +139,7 @@ a:active {text-decoration: none;}
 .btn2{font-size:12px;padding:3px;margin:5px 5px 0 0;color:#FFF;border:1px solid gray;}
 .btn2_current{font-size:12px;padding:3px;margin:5px 5px 0 0;color:#FFF;}
 .btn3{background-color:orange;font-size:14px;padding:3px 6px;margin:10px 10px 0 0;color:#FFF;}
+.btn4{font-size:12px;padding:3px 6px;color:#000;}
 .area{width:600px;line-height:20px;}
 .area2{width:400px;line-height:20px;}
 
