@@ -53,7 +53,7 @@ function card_html(res){
 		
 		html  = '<div class="namecard">'
 		html += '<div class="nc_l">' 
-		html += '<a href="'+url+'" uid="1999250817" target="_blank"><img src="'+user.profile_image_url+'" width="50" uid="'+user.uid+'" title="'+user.screen+'"/></a>'
+		html += '<a href="'+url+'" uid="'+user.uid+'" target="_blank"><img src="'+user.profile_image_url+'" width="50" uid="'+user.uid+'" title="'+user.screen+'"/></a>'
 		html += '</div>'
 		html += '<div class="nc_r">'
 		html += '<a href="'+url+'" uid="1999250817" target="_blank">'+user.screen+'</a>'
