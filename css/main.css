@@ -42,10 +42,10 @@ a:active {text-decoration: none;}
 
 /* content */
 #content{padding:0 20px;}
-#content .l_content{float:left;width:61%;}
+#content .l_content{float:left;width:63%;}
 #content .l_content .intro{margin:30px 5px;}
 #content .l_content .comment{margin:30px 5px;}
-#content .r_content{float:right;width:37%;}
+#content .r_content{float:right;width:35%;}
 #content .r_content .login{margin:30px 5px;}
 #content .r_content .newer{margin:30px 5px;}
 #content .r_content .daily{margin:30px 5px;}
@@ -109,12 +109,13 @@ a:active {text-decoration: none;}
 
 .msgs ul{border:0 none;list-style-type:none;margin:10px;padding:0;}
 .msgs ul li{margin:0 10px 10px 0;padding:0 0 15px 0;border-bottom:1px dashed gray;}
-.msgs ul li .l-msg{float:left;}
-.msgs ul li .r-msg{margin:0 0 0 80px;}
-.msgs ul li .r-msg p{margin:20px 0 5px 0;}
-.msgs ul li .b-msg{margin:0 0 0 80px;}
-.msgs ul li .b-msg .b-msg-info{float:left;}
-.msgs ul li .b-msg .b-msg-btn{float:right;}
+.msgs .l-msg{float:left;}
+.msgs .r-msg{margin:0 0 0 80px;}
+.msgs .r-msg p{margin:15px 0;}
+.msgs .r-msg .r-msg-repost{margin:20px 0; padding:10px 3px;background: url("http://1.dotabook.sinaapp.com/static/image/layout/wave.png") repeat-x scroll 50% 50% #333333;border: 1px solid #333333;}
+.msgs .b-msg{margin:0 0 0 80px;}
+.msgs .b-msg .b-msg-info{float:left;}
+.msgs .b-msg .b-msg-btn{float:right;}
 .msgs .b-page{margin:0 0 0 10px;}
 .msgs .b-page .b-page-btn{float:right;margin:0 15px 0 0;}
 
