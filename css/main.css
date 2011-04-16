@@ -157,7 +157,7 @@ a:active {text-decoration: none;}
 #heroes .hero_pic{margin:4px 4px 4px 0;float:left;}
 
 /* widget */
-.box{margin:10px;}
+.box{margin:5px;}
 .box .box_header{background: url("http://1.dotabook.sinaapp.com/static/image/layout/wave.png") repeat-x scroll 50% 50% #333333;border: 1px solid #333333;padding:4px;margin:5px 0;}
 .box .box_header .title{font-family:Segoe UI,Arial,sans-serif;font-size:14px;padding:4px;margin:2px;float:left;}
 .box .box_header .btn{font-size:12px;padding:4px;margin:2px 5px 2px 0;float:right;}
